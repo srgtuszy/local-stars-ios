@@ -11,5 +11,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func jestemPrzedsiebiorcaTapped() {
+        let form = NewMerchantForm()
+        self.navigationController?.pushViewController(form, animated: true)
+    }
 }
 

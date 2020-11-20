@@ -19,6 +19,7 @@
 		4299B72D25687D04007123B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299B72C25687D04007123B1 /* User.swift */; };
 		4299B73125687F03007123B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4299B73025687F03007123B1 /* GoogleService-Info.plist */; };
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
+		8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4299B72925687CD9007123B1 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		4299B72C25687D04007123B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4299B73025687F03007123B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMerchantForm.swift; sourceTree = "<group>"; };
 		A3969082FF406B65F932E377 /* Pods-LocalStars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStars.debug.xcconfig"; path = "Target Support Files/Pods-LocalStars/Pods-LocalStars.debug.xcconfig"; sourceTree = "<group>"; };
 		F910CEC53A46073986F2402D /* Pods_LocalStars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalStars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		8A31DE5425687F3E004E67A4 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8A31DE6B256887AD004E67A4 /* Merchant  */,
 				8A31DE5525687F44004E67A4 /* Start view controller */,
 			);
 			path = "View controllers";
@@ -128,6 +131,22 @@
 				4215D3F5256879B500B7E51E /* ViewController.swift */,
 			);
 			path = "Start view controller";
+			sourceTree = "<group>";
+		};
+		8A31DE6B256887AD004E67A4 /* Merchant  */ = {
+			isa = PBXGroup;
+			children = (
+				8A31DE6C256887C9004E67A4 /* Onboarding */,
+			);
+			path = "Merchant ";
+			sourceTree = "<group>";
+		};
+		8A31DE6C256887C9004E67A4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		CBDEF8645AD9E77614EBEA78 /* Frameworks */ = {
@@ -253,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */,
 				4299B72A25687CD9007123B1 /* Offer.swift in Sources */,
 				4299B72225687C29007123B1 /* Order.swift in Sources */,
 				4215D3F6256879B500B7E51E /* ViewController.swift in Sources */,
