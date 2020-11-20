@@ -11,10 +11,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        present(OfferViewController(), animated: false)
+    
+    @IBAction func jestemPrzedsiebiorcaTapped() {
+        let form = NewMerchantForm()
+        self.navigationController?.pushViewController(form, animated: true)
     }
 }
 

@@ -275,6 +275,8 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
+  - ImageRow (4.0.0):
+    - Eureka (~> 5.0)
   - leveldb-library (1.22)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -286,6 +288,7 @@ PODS:
 DEPENDENCIES:
   - Eureka
   - Firebase/Firestore
+  - ImageRow (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -300,6 +303,7 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - ImageRow
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -316,10 +320,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
+  ImageRow: e65b2e1a33f89062bf2a553a2aad61d975eb7428
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: fbccb748606a7bdd141b67da11904816f0b16e24
+PODFILE CHECKSUM: 245cee492ceb6f6172f2dac1c702697d4e46f78e
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.1
