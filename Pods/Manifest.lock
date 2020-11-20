@@ -1,0 +1,16 @@
+PODS:
+  - Eureka (5.3.2)
+
+DEPENDENCIES:
+  - Eureka
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Eureka
+
+SPEC CHECKSUMS:
+  Eureka: 1c2b8b5892bfb0e972d0fe05f8c09fd89f8625ec
+
+PODFILE CHECKSUM: 36368c175939c4c164aa8f88161a8412ef8e93bc
+
+COCOAPODS: 1.10.0

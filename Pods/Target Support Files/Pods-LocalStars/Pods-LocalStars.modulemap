@@ -1,0 +1,6 @@
+framework module Pods_LocalStars {
+  umbrella header "Pods-LocalStars-umbrella.h"
+
+  export *
+  module * { export * }
+}
