@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Order {
+struct Order: Codable {
     let title: String
     let status: Status
     let merchant: Merchant
     let user: User
 
-    enum Status: Int {
+    enum Status: Int, Codable {
         case received
         case inProgress
         case inDelivery
