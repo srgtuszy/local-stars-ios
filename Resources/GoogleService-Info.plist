@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>295784172524-56uhsu1iulbtpao2gajq5gjqr7kg8brn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.295784172524-56uhsu1iulbtpao2gajq5gjqr7kg8brn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtjaKkv7TsdB5WEmhmow7uvI3VzOHcRTg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>295784172524</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.initpartners.localStars</string>
+	<key>PROJECT_ID</key>
+	<string>localstars-5d76b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>localstars-5d76b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:295784172524:ios:0e809c9dc3ddd3a6f64ec9</string>
+	<key>DATABASE_URL</key>
+	<string>https://localstars-5d76b.firebaseio.com</string>
+</dict>
+</plist>

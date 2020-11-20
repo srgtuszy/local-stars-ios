@@ -17,6 +17,7 @@
 		4299B72625687C6C007123B1 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299B72525687C6C007123B1 /* Merchant.swift */; };
 		4299B72A25687CD9007123B1 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299B72925687CD9007123B1 /* Offer.swift */; };
 		4299B72D25687D04007123B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299B72C25687D04007123B1 /* User.swift */; };
+		4299B73125687F03007123B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4299B73025687F03007123B1 /* GoogleService-Info.plist */; };
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		4299B72525687C6C007123B1 /* Merchant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		4299B72925687CD9007123B1 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		4299B72C25687D04007123B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4299B73025687F03007123B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3969082FF406B65F932E377 /* Pods-LocalStars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStars.debug.xcconfig"; path = "Target Support Files/Pods-LocalStars/Pods-LocalStars.debug.xcconfig"; sourceTree = "<group>"; };
 		F910CEC53A46073986F2402D /* Pods_LocalStars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalStars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4215D3F0256879B500B7E51E /* LocalStars */,
+				4299B72F25687EF1007123B1 /* Resources */,
 				4215D3EF256879B500B7E51E /* Products */,
 				0CAE82D8EF3116FCA20A1DC3 /* Pods */,
 				CBDEF8645AD9E77614EBEA78 /* Frameworks */,
@@ -101,6 +104,14 @@
 				4299B72C25687D04007123B1 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4299B72F25687EF1007123B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4299B73025687F03007123B1 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CBDEF8645AD9E77614EBEA78 /* Frameworks */ = {
@@ -171,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4215D3FE256879B800B7E51E /* LaunchScreen.storyboard in Resources */,
+				4299B73125687F03007123B1 /* GoogleService-Info.plist in Resources */,
 				4215D3FB256879B800B7E51E /* Assets.xcassets in Resources */,
 				4215D3F9256879B500B7E51E /* Main.storyboard in Resources */,
 			);
@@ -386,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.initpartners.localStars.LocalStars;
+				PRODUCT_BUNDLE_IDENTIFIER = io.initpartners.localStars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.initpartners.localStars.LocalStars;
+				PRODUCT_BUNDLE_IDENTIFIER = io.initpartners.localStars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
