@@ -80,11 +80,11 @@
 		4215D3F0256879B500B7E51E /* LocalStars */ = {
 			isa = PBXGroup;
 			children = (
+				4215D3F7256879B500B7E51E /* Main.storyboard */,
+				8A31DE5425687F3E004E67A4 /* View controllers */,
 				4299B72025687C22007123B1 /* Model */,
 				4215D3F1256879B500B7E51E /* AppDelegate.swift */,
 				4215D3F3256879B500B7E51E /* SceneDelegate.swift */,
-				4215D3F5256879B500B7E51E /* ViewController.swift */,
-				4215D3F7256879B500B7E51E /* Main.storyboard */,
 				4215D3FA256879B800B7E51E /* Assets.xcassets */,
 				4215D3FC256879B800B7E51E /* LaunchScreen.storyboard */,
 				4215D3FF256879B800B7E51E /* Info.plist */,
@@ -101,6 +101,22 @@
 				4299B72C25687D04007123B1 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A31DE5425687F3E004E67A4 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A31DE5525687F44004E67A4 /* Start view controller */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		8A31DE5525687F44004E67A4 /* Start view controller */ = {
+			isa = PBXGroup;
+			children = (
+				4215D3F5256879B500B7E51E /* ViewController.swift */,
+			);
+			path = "Start view controller";
 			sourceTree = "<group>";
 		};
 		CBDEF8645AD9E77614EBEA78 /* Frameworks */ = {
