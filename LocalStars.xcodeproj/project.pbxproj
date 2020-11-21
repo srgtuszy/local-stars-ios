@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42048D5225689187005CAA2B /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42048D5125689187005CAA2B /* UIViewController+Alerts.swift */; };
+		42048D5825689A42005CAA2B /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42048D5725689A42005CAA2B /* ImageUploadService.swift */; };
 		4215D3F2256879B500B7E51E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215D3F1256879B500B7E51E /* AppDelegate.swift */; };
 		4215D3F4256879B500B7E51E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215D3F3256879B500B7E51E /* SceneDelegate.swift */; };
 		4215D3F6256879B500B7E51E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215D3F5256879B500B7E51E /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		33CE190545B6B59BC40466BE /* Pods-LocalStars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStars.release.xcconfig"; path = "Target Support Files/Pods-LocalStars/Pods-LocalStars.release.xcconfig"; sourceTree = "<group>"; };
 		42048D5125689187005CAA2B /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		42048D5725689A42005CAA2B /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
 		4215D3EE256879B500B7E51E /* LocalStars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalStars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215D3F1256879B500B7E51E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4215D3F3256879B500B7E51E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		42048D5625689A33005CAA2B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				42048D5725689A42005CAA2B /* ImageUploadService.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		4215D3E5256879B500B7E51E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		4215D3F0256879B500B7E51E /* LocalStars */ = {
 			isa = PBXGroup;
 			children = (
+				42048D5625689A33005CAA2B /* Images */,
 				4215D3F7256879B500B7E51E /* Main.storyboard */,
 				8A31DE5425687F3E004E67A4 /* View controllers */,
 				4299B72025687C22007123B1 /* Model */,
@@ -313,6 +324,7 @@
 				4215D3F2256879B500B7E51E /* AppDelegate.swift in Sources */,
 				4215D3F4256879B500B7E51E /* SceneDelegate.swift in Sources */,
 				42D2BBA52568889B0090D14D /* OfferViewController.swift in Sources */,
+				42048D5825689A42005CAA2B /* ImageUploadService.swift in Sources */,
 				8AE6035B2568912600983FAB /* OffersListViewController.swift in Sources */,
 				4299B72625687C6C007123B1 /* Merchant.swift in Sources */,
 				4299B72D25687D04007123B1 /* User.swift in Sources */,

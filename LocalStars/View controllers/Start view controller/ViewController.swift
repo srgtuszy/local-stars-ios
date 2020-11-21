@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        present(OfferViewController(), animated: false)
     }
     
     @IBAction func jestemPrzedsiebiorcaTapped() {

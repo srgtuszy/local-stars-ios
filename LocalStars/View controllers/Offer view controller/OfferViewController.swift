@@ -40,6 +40,15 @@ final class OfferViewController: FormViewController {
                 row.tag = .price
                 row.placeholder = "Wpisz cenę"
             }
+
+            <<< ButtonRow() { row in
+                row.title = "Dodaj zdjęcie"
+                row.tag = .photo
+                row.onCellSelection {[unowned self] _, _ in
+                    
+                }
+            }
+
             <<< ButtonRow() { row in
                 row.title = "Wyślij"
                 row.onCellSelection {[unowned self] _, _ in
@@ -63,4 +72,5 @@ private extension String {
     static let category = "category"
     static let description = "description"
     static let price = "price"
+    static let photo = "photo"
 }
