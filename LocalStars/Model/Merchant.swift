@@ -18,4 +18,5 @@ struct Merchant: Codable {
     let rating: Double
     let openingHours: String
     let website: String
+    let avatarUrl: String
 }

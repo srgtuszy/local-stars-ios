@@ -26,6 +26,8 @@
 		42C3D1432568C3F200C5BE7E /* SearchOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */; };
 		42C3D18B2568D73400C5BE7E /* BorderedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D18A2568D73400C5BE7E /* BorderedStackView.swift */; };
 		42C3D1972568E24B00C5BE7E /* MerchantsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D1962568E24B00C5BE7E /* MerchantsDataSource.swift */; };
+		42C3D19A25694BBA00C5BE7E /* MerchantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D19925694BBA00C5BE7E /* MerchantCell.swift */; };
+		42C3D19D25694F2700C5BE7E /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D19C25694F2700C5BE7E /* LocationFetcher.swift */; };
 		42D2BBA52568889B0090D14D /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2BBA42568889B0090D14D /* AddOfferViewController.swift */; };
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
 		8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */; };
@@ -59,6 +61,8 @@
 		42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOffersViewController.swift; sourceTree = "<group>"; };
 		42C3D18A2568D73400C5BE7E /* BorderedStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedStackView.swift; sourceTree = "<group>"; };
 		42C3D1962568E24B00C5BE7E /* MerchantsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantsDataSource.swift; sourceTree = "<group>"; };
+		42C3D19925694BBA00C5BE7E /* MerchantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantCell.swift; sourceTree = "<group>"; };
+		42C3D19C25694F2700C5BE7E /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		42D2BBA42568889B0090D14D /* AddOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
 		8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMerchantForm.swift; sourceTree = "<group>"; };
 		8AE6035A2568912600983FAB /* OffersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				4215D3FC256879B800B7E51E /* LaunchScreen.storyboard */,
 				4215D3FF256879B800B7E51E /* Info.plist */,
 				8AE6036C2568A3B500983FAB /* Utils.swift */,
+				42C3D19C25694F2700C5BE7E /* LocationFetcher.swift */,
 			);
 			path = LocalStars;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				8AE6036125689B0100983FAB /* CategoriesViewController.swift */,
 				8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */,
 				42C3D1962568E24B00C5BE7E /* MerchantsDataSource.swift */,
+				42C3D19925694BBA00C5BE7E /* MerchantCell.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -372,11 +378,13 @@
 			files = (
 				8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */,
 				8AE603892568B3F000983FAB /* MerchantLoginForm.swift in Sources */,
+				42C3D19D25694F2700C5BE7E /* LocationFetcher.swift in Sources */,
 				4299B72A25687CD9007123B1 /* Offer.swift in Sources */,
 				8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */,
 				42C3D1972568E24B00C5BE7E /* MerchantsDataSource.swift in Sources */,
 				42C3D13F2568C28700C5BE7E /* OffersDataSource.swift in Sources */,
 				8AE6036D2568A3B500983FAB /* Utils.swift in Sources */,
+				42C3D19A25694BBA00C5BE7E /* MerchantCell.swift in Sources */,
 				4299B72225687C29007123B1 /* Order.swift in Sources */,
 				42048D5225689187005CAA2B /* UIViewController+Alerts.swift in Sources */,
 				4215D3F6256879B500B7E51E /* ViewController.swift in Sources */,
