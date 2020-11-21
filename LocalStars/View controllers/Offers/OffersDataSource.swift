@@ -46,7 +46,7 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
         } else {
             cell.priceLabel.text = "Gratis!"
         }
-        cell.categoryLabel.text = "💰"
+        cell.categoryLabel.text = offer.categoryEmoji
         if let url = URL(string: offer.photoUrl) {
             let processor = DownsamplingImageProcessor(size: cell.offerImageView.bounds.size)
                          |> RoundCornerImageProcessor(cornerRadius: 20)
@@ -60,3 +60,16 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
         return cell
     }
 }
+
+private extension Offer {
+    var categoryEmoji: String {
+        for category in categories {
+            if category["name"] == self.category {
+                return category["emoji"]!
+            }
+        }
+
+        return "🍕"
+    }
+}
+

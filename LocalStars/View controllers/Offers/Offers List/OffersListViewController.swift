@@ -16,6 +16,7 @@ class OffersListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Oferty"
         tableView.separatorStyle = .none
         tableView.separatorInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
         tableView.rowHeight = 200
