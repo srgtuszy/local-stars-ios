@@ -123,9 +123,9 @@ final class EntityFetcher {
     }
 
     func fetch(ordersForUserWith userId: String, completion: @escaping (Result<[Order], FetchError>) -> Void) {
-        db.collection(.merchantCollectionKey)
+        db.collection(.ordersCollectionKey)
             .whereField("userId", isEqualTo: userId)
-            .getDocuments { querySnapshot, error in
+            .addSnapshotListener { querySnapshot, error in
                 if let error = error {
                     completion(.failure(.firebaseError(error)))
                     return
