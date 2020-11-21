@@ -122,6 +122,27 @@ final class EntityFetcher {
             }
     }
 
+    func fetch(ordersForUserWith userId: String, completion: @escaping (Result<[Order], FetchError>) -> Void) {
+        db.collection(.merchantCollectionKey)
+            .whereField("userId", isEqualTo: userId)
+            .getDocuments { querySnapshot, error in
+                if let error = error {
+                    completion(.failure(.firebaseError(error)))
+                    return
+                } else if let snapshot = querySnapshot {
+                    let orders = snapshot.documents.compactMap { (document: QueryDocumentSnapshot) -> Order? in
+                        var order = try? document.data(as: Order.self)
+                        order?.id = document.documentID
+
+                        return order
+                    }
+                    DispatchQueue.main.async {
+                        completion(.success(orders))
+                    }
+                }
+            }
+    }
+
     enum FetchError: Error {
         case firebaseError(Error)
         case missingSnapshot
@@ -131,5 +152,6 @@ final class EntityFetcher {
 private extension String {
     static let offersCollectionKey = "offers"
     static let merchantCollectionKey = "merchants"
+    static let ordersCollectionKey = "orders"
 }
 
