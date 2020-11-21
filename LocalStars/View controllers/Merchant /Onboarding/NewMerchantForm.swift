@@ -51,10 +51,19 @@ class NewMerchantForm: FormViewController {
                 row.title = "Godziny otwarcia"
                 row.placeholder = "9:00-20:00"
             }
+        form +++ Section("Kategoria")
+            <<< PushRow<String> { row in
+                row.title = "Wybierz kategorię swojego biznesu"
+                row.options = ["Gastronomia", "Zakupy", "Zdrowie i uroda", "Wyposażenie i remonty", "Edukacja", "Transport", "inne usługi", "Różne"]
+            }
         form +++ Section("Logotyp")
             <<< ImageRow(){
                 $0.title = "Wybierz logotyp"
                 $0.sourceTypes = [.All]
+            }
+        form +++ Section()
+            <<< ButtonRow {
+                $0.title = "Zarejestruj się"
             }
             
     }
