@@ -11,12 +11,14 @@ class ViewController: UIViewController {
     
     @IBOutlet var przegladajButton: UIButton!
     @IBOutlet var przedsiebiorcaButton: UIButton!
+    @IBOutlet var logowanieButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         przegladajButton.setUnderlinedTitle(string: "Przeglądaj oferty bez logowania")
         przedsiebiorcaButton.setUnderlinedTitle(string: "Jestem przedsiębiorcą")
+        logowanieButton.layer.borderColor = UIColor(white: 1.0, alpha: 1.0).cgColor
     }
     
     @IBAction func jestemPrzedsiebiorcaTapped() {
