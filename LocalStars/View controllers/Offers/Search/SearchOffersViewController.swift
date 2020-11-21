@@ -35,6 +35,7 @@ final class SearchOffersViewController: UIViewController {
 
 extension SearchOffersViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         guard let query = searchBar.text, !query.isEmpty else {
             return
         }
