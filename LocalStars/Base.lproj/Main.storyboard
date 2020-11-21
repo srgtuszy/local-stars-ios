@@ -133,21 +133,72 @@
             </objects>
             <point key="canvasLocation" x="2232" y="-479"/>
         </scene>
-        <!--View Controller-->
+        <!--Offers List View Controller-->
         <scene sceneID="f4L-1a-P3p">
             <objects>
-                <viewController id="3I3-zI-fcq" sceneMemberID="viewController">
+                <viewController id="3I3-zI-fcq" customClass="OffersListViewController" customModule="LocalStars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVX-Ac-hde">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GmB-jc-q2H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferListCell" rowHeight="113" id="Lij-js-PHG" customClass="OfferListCell" customModule="LocalStars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lij-js-PHG" id="Ed3-wn-D2m">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lU-ut-tHE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-5d-hsf">
+                                                    <rect key="frame" x="0.0" y="56.5" width="414" height="56.5"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9lU-ut-tHE" secondAttribute="trailing" id="3wr-ML-j0F"/>
+                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="top" secondItem="Ed3-wn-D2m" secondAttribute="top" id="SzT-jA-RLS"/>
+                                                <constraint firstAttribute="bottom" secondItem="eD9-5d-hsf" secondAttribute="bottom" id="TXW-Is-lBk"/>
+                                                <constraint firstAttribute="trailing" secondItem="eD9-5d-hsf" secondAttribute="trailing" id="UdQ-Mi-O5l"/>
+                                                <constraint firstAttribute="bottom" secondItem="9lU-ut-tHE" secondAttribute="bottom" id="YQy-YO-umL"/>
+                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" id="aaD-jV-N4V"/>
+                                                <constraint firstItem="eD9-5d-hsf" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" id="eZ3-KO-RYS"/>
+                                                <constraint firstItem="eD9-5d-hsf" firstAttribute="height" secondItem="9lU-ut-tHE" secondAttribute="height" multiplier="0.5" id="xkv-41-NLG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="offerImageView" destination="9lU-ut-tHE" id="2Ps-yH-VS3"/>
+                                            <outlet property="titleLabel" destination="eD9-5d-hsf" id="M7I-VU-vif"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="F7n-Ho-RtR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GmB-jc-q2H" firstAttribute="trailing" secondItem="F7n-Ho-RtR" secondAttribute="trailing" id="1HI-Vk-tWI"/>
+                            <constraint firstItem="GmB-jc-q2H" firstAttribute="bottom" secondItem="F7n-Ho-RtR" secondAttribute="bottom" id="CPq-Ir-hqG"/>
+                            <constraint firstItem="GmB-jc-q2H" firstAttribute="top" secondItem="F7n-Ho-RtR" secondAttribute="top" id="VdS-0y-6mn"/>
+                            <constraint firstItem="GmB-jc-q2H" firstAttribute="leading" secondItem="F7n-Ho-RtR" secondAttribute="leading" id="wgM-t9-e9X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f6i-sa-UET"/>
+                    <connections>
+                        <outlet property="tableView" destination="GmB-jc-q2H" id="MKI-8g-L2x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqI-mj-HP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="-479"/>
+            <point key="canvasLocation" x="3005.7971014492755" y="-479.46428571428567"/>
         </scene>
         <!--Kategorie-->
         <scene sceneID="2TT-Qm-BkT">
@@ -330,6 +381,12 @@
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="sg" width="547" height="784"/>
         <image name="ticket" catalog="system" width="128" height="84"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

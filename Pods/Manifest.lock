@@ -286,6 +286,9 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - ImageRow (4.0.0):
     - Eureka (~> 5.0)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
   - leveldb-library (1.22)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
@@ -300,6 +303,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseFirestoreSwift
   - ImageRow (~> 4.0)
+  - Kingfisher
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -318,6 +322,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - ImageRow
+    - Kingfisher
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -338,10 +343,11 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   ImageRow: e65b2e1a33f89062bf2a553a2aad61d975eb7428
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 1f991716351f066171d9460b128f50a44aa1f9b4
+PODFILE CHECKSUM: 19cfe0fbc7eb811e24460225042191e0dc65b4dd
 
 COCOAPODS: 1.10.0
