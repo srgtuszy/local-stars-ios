@@ -262,11 +262,28 @@
                     <navigationItem key="navigationItem" id="f6i-sa-UET"/>
                     <connections>
                         <outlet property="tableView" destination="GmB-jc-q2H" id="MKI-8g-L2x"/>
+                        <segue destination="mXo-lZ-LHo" kind="show" identifier="showOffer" id="LkQ-Nc-6oH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqI-mj-HP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3005.7971014492755" y="-479.46428571428567"/>
+        </scene>
+        <!--Offer Details View Controller-->
+        <scene sceneID="lyY-aX-81d">
+            <objects>
+                <viewController id="mXo-lZ-LHo" customClass="OfferDetailsViewController" customModule="LocalStars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwU-pn-4iJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pEv-Xd-4C1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LaS-wR-mCV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBc-Zs-36z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5294" y="204"/>
         </scene>
         <!--Kategorie-->
         <scene sceneID="2TT-Qm-BkT">
@@ -405,6 +422,7 @@
                     <connections>
                         <outlet property="searchBar" destination="b4y-rB-1Fw" id="qpf-c6-Xfn"/>
                         <outlet property="tableView" destination="7ng-fM-OJF" id="y7W-nQ-CtK"/>
+                        <segue destination="mXo-lZ-LHo" kind="show" identifier="showOffer" id="NUQ-kl-DL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSr-kD-ZzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -788,6 +806,7 @@
                         <outlet property="ratingLabel" destination="ruR-yV-Q3j" id="hHo-eL-R9f"/>
                         <outlet property="tableView" destination="qTH-cT-ziL" id="NfM-6u-7eq"/>
                         <outlet property="websiteLabel" destination="MbB-82-sAq" id="F4e-EU-Pg0"/>
+                        <segue destination="mXo-lZ-LHo" kind="show" identifier="showOffer" id="2QH-94-Xy5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJe-l0-vOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -807,7 +826,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4033.3333333333335" y="203.57142857142856"/>
+            <point key="canvasLocation" x="4151" y="204"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lua-Rs-Hdr">
@@ -824,7 +843,25 @@
             </objects>
             <point key="canvasLocation" x="2807" y="-1152"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="J0d-my-L9i">
+            <objects>
+                <viewController id="oEw-oC-dBF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4l-Zp-LMg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UqQ-G0-4Il"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1i-DP-7XK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="-559"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LkQ-Nc-6oH"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
