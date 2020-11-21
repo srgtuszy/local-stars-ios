@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 final class OfferViewController: FormViewController {
     private let db = Firestore.firestore()
+    private let uploader = ImageUploadService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ final class OfferViewController: FormViewController {
                 row.title = "Dodaj zdjęcie"
                 row.tag = .photo
                 row.onCellSelection {[unowned self] _, _ in
-                    
+                    self.pickPhoto()
                 }
             }
 
@@ -57,9 +58,39 @@ final class OfferViewController: FormViewController {
             }
     }
 
+    private func pickPhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .savedPhotosAlbum
+        present(imagePicker, animated: true)
+    }
+
     private func sendToFirebase() {
         db.collection("offers").document().setData(form.values())
     }
+
+    private func upload(image: UIImage) {
+        uploader.upload(image: image) { result in
+            switch result {
+            case .success(let url):
+                print("photo url: \(url)")
+            case .failure(let error):
+                print("upload failed: \(error)")
+            }
+        }
+    }
+}
+
+extension OfferViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
+            return
+        }
+        upload(image: image)
+    }
+}
+
+extension OfferViewController: UINavigationControllerDelegate {
 
 }
 
