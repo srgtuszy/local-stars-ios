@@ -21,3 +21,14 @@ struct Merchant: Codable {
     let website: String
     let avatarUrl: String
 }
+
+extension Merchant {
+    var ratingTitle: String {
+        var title = ""
+        for _ in 0...Int(rating) {
+            title += "⭐️ "
+        }
+
+        return String(title.dropLast())
+    }
+}

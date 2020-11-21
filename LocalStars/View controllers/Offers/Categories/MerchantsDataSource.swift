@@ -61,15 +61,6 @@ private extension Merchant {
     var location: CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
-
-    var ratingTitle: String {
-        var title = ""
-        for _ in 0...Int(rating) {
-            title += "⭐️ "
-        }
-
-        return String(title.dropLast())
-    }
 }
 
 private extension LocationFetcher {
