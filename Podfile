@@ -9,5 +9,4 @@ target 'LocalStars' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
-  pod 'SVProgressHUD'
 end

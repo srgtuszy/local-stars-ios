@@ -92,18 +92,18 @@ final class AddOfferViewController: FormViewController {
         } catch {
             print("Failed to save offer: \(error)")
             showAlert(title: "Błąd", message: "Nie udało się dodać oferty, spróbuj jeszcze raz.")
+            return
         }
+        dismiss(animated: true)
     }
 
     private func upload(image: UIImage) {
         uploader.upload(image: image) {[weak self] result in
             switch result {
             case .success(let url):
-                print("photo url: \(url)")
                 self?.photoUrl = url
             case .failure(let error):
                 print("upload failed: \(error)")
-                self?.showAlert(title: "Błąd", message: "Nie udało się wgrać zdjęcia")
             }
         }
     }

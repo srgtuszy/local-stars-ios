@@ -293,7 +293,6 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.11)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Eureka
@@ -301,7 +300,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseFirestoreSwift
   - ImageRow (~> 4.0)
-  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -323,7 +321,6 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -344,8 +341,7 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 200418269ffbdf27416bc2036b4a0c8816d86ea3
+PODFILE CHECKSUM: 1f991716351f066171d9460b128f50a44aa1f9b4
 
 COCOAPODS: 1.10.0
