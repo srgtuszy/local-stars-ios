@@ -8,6 +8,7 @@
 import Foundation
 import Eureka
 import UIKit
+import Firebase
 
 class MerchantLoginForm: FormViewController {
     
@@ -29,12 +30,18 @@ class MerchantLoginForm: FormViewController {
             <<< EmailRow() { row in
                 row.title = "Adres e-mail"
                 row.placeholder = "sklep_jacek@wp.pl"
+                row.tag = "email"
             }
             <<< PasswordRow() { row in
                 row.title = "Hasło"
+                row.tag = "pass"
             }
             <<< ButtonRow() { row in
                 row.title = "Zaloguj"
+                row.onCellSelection {[unowned self] _, _ in
+                    
+                    self.attemptLoginWith(email: self.form.values()["email"] as! String, password: self.form.values()["pass"] as! String)
+                }
             }
         form.allSections[0].footer = {
             var header = HeaderFooterView<UIView>(.callback({
@@ -52,6 +59,21 @@ class MerchantLoginForm: FormViewController {
                       header.height = { 100 }
                       return header
         }()
+    }
+    
+    func attemptLoginWith(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                let alert = UIAlertController(title: "Błąd przy logowaniu", message: "Podałeś błędny adres e-mail lub hasło. Spróbuj jeszcze raz", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                print("logged in")
+            }
+        }
     }
     
     @objc func showRegisterFlow() {
