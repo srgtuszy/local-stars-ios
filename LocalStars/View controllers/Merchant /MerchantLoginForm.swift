@@ -10,7 +10,14 @@ import Eureka
 import UIKit
 import Firebase
 
+enum OnboardingType {
+    case merchantOnboarding
+    case userOnboarding
+}
+
 class MerchantLoginForm: FormViewController {
+    
+    var onboardingType: OnboardingType? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,10 +33,10 @@ class MerchantLoginForm: FormViewController {
         super.viewDidLoad()
         self.title = "Logowanie"
 
-        form +++ Section("Logowanie przedsiębiorcy")
+        form +++ Section(onboardingType == .merchantOnboarding ? "Logowanie przedsiębiorcy" : "Logowanie użytkownika")
             <<< EmailRow() { row in
                 row.title = "Adres e-mail"
-                row.placeholder = "sklep_jacek@wp.pl"
+                row.placeholder = onboardingType == .merchantOnboarding ? "sklep_jacek@wp.pl" : "jan.kowalski@wp.pl"
                 row.tag = "email"
             }
             <<< PasswordRow() { row in
@@ -77,7 +84,12 @@ class MerchantLoginForm: FormViewController {
     }
     
     @objc func showRegisterFlow() {
-        let registerForm = NewMerchantForm()
-        self.navigationController?.pushViewController(registerForm, animated: true)
+        if onboardingType == .merchantOnboarding {
+            let registerForm = NewMerchantForm()
+            self.navigationController?.pushViewController(registerForm, animated: true)
+        } else {
+            
+        }
+        
     }
 }

@@ -75,22 +75,48 @@
                                     <segue destination="R4U-sc-hhH" kind="show" id="zjP-gw-M28"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-3t-WOQ">
+                                <rect key="frame" x="34.5" y="618" width="345" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="GUc-c7-KRv"/>
+                                    <constraint firstAttribute="height" constant="58" id="jgd-l9-8Ls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Logowanie / Rejestracja użytkownika"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="tertiarySystemBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logowanieButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYC-hd-YlA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.14889233732876711" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6gG-3t-WOQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Eg-In-N9y"/>
                             <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Rv-Ia-b1a"/>
                             <constraint firstItem="cHg-km-GBg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="8kE-8s-GTn"/>
                             <constraint firstItem="GRQ-KH-Wed" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bht-ok-d9a"/>
                             <constraint firstItem="18m-0r-zlG" firstAttribute="top" secondItem="cHg-km-GBg" secondAttribute="bottom" constant="12" id="EK9-02-j2V"/>
                             <constraint firstItem="18m-0r-zlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="Nvj-rb-AmF"/>
                             <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a4C-i9-ixB"/>
+                            <constraint firstItem="GRQ-KH-Wed" firstAttribute="top" secondItem="6gG-3t-WOQ" secondAttribute="bottom" constant="36" id="eS8-nD-lhM"/>
                             <constraint firstItem="cHg-km-GBg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="hFR-MM-o13"/>
                             <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="top" secondItem="GRQ-KH-Wed" secondAttribute="bottom" constant="83" id="tem-UW-yc1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MDa-O4-dZu"/>
                     <connections>
+                        <outlet property="logowanieButton" destination="6gG-3t-WOQ" id="ny0-6g-Bl9"/>
                         <outlet property="przedsiebiorcaButton" destination="Cdl-Jp-W8Z" id="Bma-Am-OWI"/>
                         <outlet property="przegladajButton" destination="GRQ-KH-Wed" id="b0v-v2-hFH"/>
                     </connections>
@@ -518,6 +544,9 @@
         <image name="sg" width="547" height="784"/>
         <image name="ticket" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
