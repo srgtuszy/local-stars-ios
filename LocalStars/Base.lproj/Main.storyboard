@@ -64,11 +64,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRQ-KH-Wed">
-                                <rect key="frame" x="148.5" y="766" width="117" height="37"/>
+                                <rect key="frame" x="97.5" y="712" width="219" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="LV9-Ty-zNx"/>
                                 </constraints>
-                                <state key="normal" title="Przeglądaj oferty">
+                                <state key="normal" title="Przeglądaj oferty bez logowania">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -86,10 +86,14 @@
                             <constraint firstItem="18m-0r-zlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="Nvj-rb-AmF"/>
                             <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a4C-i9-ixB"/>
                             <constraint firstItem="cHg-km-GBg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="hFR-MM-o13"/>
-                            <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="top" secondItem="GRQ-KH-Wed" secondAttribute="bottom" constant="29" id="tem-UW-yc1"/>
+                            <constraint firstItem="Cdl-Jp-W8Z" firstAttribute="top" secondItem="GRQ-KH-Wed" secondAttribute="bottom" constant="83" id="tem-UW-yc1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MDa-O4-dZu"/>
+                    <connections>
+                        <outlet property="przedsiebiorcaButton" destination="Cdl-Jp-W8Z" id="Bma-Am-OWI"/>
+                        <outlet property="przegladajButton" destination="GRQ-KH-Wed" id="b0v-v2-hFH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

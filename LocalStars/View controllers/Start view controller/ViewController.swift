@@ -8,8 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var przegladajButton: UIButton!
+    @IBOutlet var przedsiebiorcaButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        przegladajButton.setUnderlinedTitle(string: "Przeglądaj oferty bez logowania")
+        przedsiebiorcaButton.setUnderlinedTitle(string: "Jestem przedsiębiorcą")
     }
     
     @IBAction func jestemPrzedsiebiorcaTapped() {
@@ -18,3 +25,12 @@ class ViewController: UIViewController {
     }
 }
 
+extension UIButton {
+    func setUnderlinedTitle(string: String) {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 12.0),
+            .underlineStyle: NSUnderlineStyle.single.rawValue]
+        let attributedString = NSMutableAttributedString(string: string, attributes: attributes)
+        self.setAttributedTitle(attributedString, for: .normal)
+    }
+}
