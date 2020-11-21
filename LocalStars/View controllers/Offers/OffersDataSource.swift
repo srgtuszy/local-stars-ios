@@ -50,6 +50,7 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
         if let url = URL(string: offer.photoUrl) {
             let processor = DownsamplingImageProcessor(size: cell.offerImageView.bounds.size)
                          |> RoundCornerImageProcessor(cornerRadius: 20)
+            cell.offerImageView.kf.indicatorType = .activity
             cell.offerImageView.kf.setImage(with: url, options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),

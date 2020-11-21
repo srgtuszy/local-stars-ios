@@ -41,7 +41,13 @@ final class MerchantsDataSource: NSObject, UITableViewDataSource {
         cell.nameLabel.text = merchant.name
         cell.ratingLabel.text = merchant.ratingTitle
         if let url = URL(string: merchant.avatarUrl) {
-            cell.avatarImageView.kf.setImage(with: url)
+            let processor = RoundCornerImageProcessor(cornerRadius: 25)
+            cell.avatarImageView.kf.indicatorType = .activity
+            cell.avatarImageView.kf.setImage(with: url, options: [
+                .processor(processor),
+                .transition(.fade(1)),
+            ])
+
         }
         if let distance = locationFetcher.distance(to: merchant) {
             cell.distanceLabel.text = String(format: "%.2fkm", distance / 1000)
@@ -62,7 +68,7 @@ private extension Merchant {
             title += "⭐️ "
         }
 
-        return title
+        return String(title.dropLast())
     }
 }
 
