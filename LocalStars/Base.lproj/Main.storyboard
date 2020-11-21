@@ -276,14 +276,52 @@
                     <view key="view" contentMode="scaleToFill" id="dwU-pn-4iJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-8t-qyb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQQ-Ni-ufm">
+                                <rect key="frame" x="20" y="357" width="374" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="mp3-9R-2eZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u76-dg-p6u">
+                                <rect key="frame" x="20" y="390" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RC-iY-8px">
+                                <rect key="frame" x="0.0" y="744" width="414" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Kup teraz">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pEv-Xd-4C1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hdg-8t-qyb" firstAttribute="trailing" secondItem="pEv-Xd-4C1" secondAttribute="trailing" id="HKL-mn-EMd"/>
+                            <constraint firstItem="XQQ-Ni-ufm" firstAttribute="top" secondItem="hdg-8t-qyb" secondAttribute="bottom" id="MBP-8G-AUx"/>
+                            <constraint firstItem="XQQ-Ni-ufm" firstAttribute="leading" secondItem="pEv-Xd-4C1" secondAttribute="leading" constant="20" id="SDN-VX-KV3"/>
+                            <constraint firstItem="hdg-8t-qyb" firstAttribute="height" secondItem="dwU-pn-4iJ" secondAttribute="height" multiplier="0.3" id="TEM-qJ-05n"/>
+                            <constraint firstItem="hdg-8t-qyb" firstAttribute="top" secondItem="pEv-Xd-4C1" secondAttribute="top" id="Y3T-RE-kb6"/>
+                            <constraint firstItem="pEv-Xd-4C1" firstAttribute="trailing" secondItem="XQQ-Ni-ufm" secondAttribute="trailing" constant="20" id="ZKC-9E-Elz"/>
+                            <constraint firstItem="hdg-8t-qyb" firstAttribute="leading" secondItem="pEv-Xd-4C1" secondAttribute="leading" id="o5X-VD-HRm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LaS-wR-mCV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBc-Zs-36z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5274" y="188"/>
+            <point key="canvasLocation" x="5273.913043478261" y="187.5"/>
         </scene>
         <!--Kategorie-->
         <scene sceneID="2TT-Qm-BkT">
@@ -870,6 +908,9 @@
         <image name="ticket" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

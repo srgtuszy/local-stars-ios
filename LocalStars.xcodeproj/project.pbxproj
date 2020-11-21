@@ -137,6 +137,7 @@
 		4215D3F0256879B500B7E51E /* LocalStars */ = {
 			isa = PBXGroup;
 			children = (
+				42C3D1A62569988A00C5BE7E /* Utils */,
 				42048D5625689A33005CAA2B /* Images */,
 				4215D3F7256879B500B7E51E /* Main.storyboard */,
 				8A31DE5425687F3E004E67A4 /* View controllers */,
@@ -177,6 +178,13 @@
 				42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		42C3D1A62569988A00C5BE7E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		42D2BBA32568888F0090D14D /* Offer view controller */ = {
