@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Merchant {
+struct Merchant: Codable {
     let name: String
     let address: String
     let latitude: Double
