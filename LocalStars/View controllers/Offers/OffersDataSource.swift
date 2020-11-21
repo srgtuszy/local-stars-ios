@@ -12,6 +12,14 @@ import Kingfisher
 final class OffersDataSource: NSObject, UITableViewDataSource {
     private weak var tableView: UITableView?
     private var offers = [Offer]()
+    private let priceFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "pl_PL")
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+
+        return formatter
+    }()
 
     func attach(tableView: UITableView) {
         tableView.dataSource = self
@@ -32,7 +40,12 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferListCell", for: indexPath) as! OfferListCell
         let offer = offers[indexPath.row]
         cell.titleLabel.text = "\(offer.title)"
-        cell.priceLabel.text = "\(offer.price)"
+        if let price = priceFormatter.number(from: offer.price),
+           let priceTitle = priceFormatter.string(from: price) {
+            cell.priceLabel.text = "\(priceTitle) PLN"
+        } else {
+            cell.priceLabel.text = "Gratis!"
+        }
         cell.categoryLabel.text = "💰"
         if let url = URL(string: offer.photoUrl) {
             let processor = DownsamplingImageProcessor(size: cell.offerImageView.bounds.size)
@@ -41,7 +54,6 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
-                .cacheOriginalImage
             ])
         }
 
