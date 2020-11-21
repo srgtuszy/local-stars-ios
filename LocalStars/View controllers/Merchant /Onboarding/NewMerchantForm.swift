@@ -54,7 +54,9 @@ class NewMerchantForm: FormViewController {
         form +++ Section("Kategoria")
             <<< PushRow<String> { row in
                 row.title = "Wybierz kategorię swojego biznesu"
-                row.options = ["Gastronomia", "Zakupy", "Zdrowie i uroda", "Wyposażenie i remonty", "Edukacja", "Transport", "inne usługi", "Różne"]
+                row.options = categories.map({ dict in
+                    return "\(dict["emoji"]!) \(dict["name"]!)"
+                })
             }
         form +++ Section("Logotyp")
             <<< ImageRow(){

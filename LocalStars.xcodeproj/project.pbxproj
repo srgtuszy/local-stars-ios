@@ -23,6 +23,9 @@
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
 		8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */; };
 		8AE6035B2568912600983FAB /* OffersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6035A2568912600983FAB /* OffersListViewController.swift */; };
+		8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036125689B0100983FAB /* CategoriesViewController.swift */; };
+		8AE6036925689E7000983FAB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */; };
+		8AE6036D2568A3B500983FAB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036C2568A3B500983FAB /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		42D2BBA42568889B0090D14D /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMerchantForm.swift; sourceTree = "<group>"; };
 		8AE6035A2568912600983FAB /* OffersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListViewController.swift; sourceTree = "<group>"; };
+		8AE6036125689B0100983FAB /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		8AE6036C2568A3B500983FAB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A3969082FF406B65F932E377 /* Pods-LocalStars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStars.debug.xcconfig"; path = "Target Support Files/Pods-LocalStars/Pods-LocalStars.debug.xcconfig"; sourceTree = "<group>"; };
 		F910CEC53A46073986F2402D /* Pods_LocalStars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalStars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 				4215D3FA256879B800B7E51E /* Assets.xcassets */,
 				4215D3FC256879B800B7E51E /* LaunchScreen.storyboard */,
 				4215D3FF256879B800B7E51E /* Info.plist */,
+				8AE6036C2568A3B500983FAB /* Utils.swift */,
 			);
 			path = LocalStars;
 			sourceTree = "<group>";
@@ -141,8 +148,8 @@
 		8A31DE5425687F3E004E67A4 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AE6035F25689AE000983FAB /* Offers */,
 				42048D502568917C005CAA2B /* Extensions */,
-				8AE60359256890FB00983FAB /* Offers List */,
 				8A31DE5525687F44004E67A4 /* Start view controller */,
 				42D2BBA32568888F0090D14D /* Offer view controller */,
 				8A31DE6B256887AD004E67A4 /* Merchant  */,
@@ -180,6 +187,24 @@
 				8AE6035A2568912600983FAB /* OffersListViewController.swift */,
 			);
 			path = "Offers List";
+			sourceTree = "<group>";
+		};
+		8AE6035F25689AE000983FAB /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				8AE6036025689AF000983FAB /* Categories */,
+				8AE60359256890FB00983FAB /* Offers List */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		8AE6036025689AF000983FAB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8AE6036125689B0100983FAB /* CategoriesViewController.swift */,
+				8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		CBDEF8645AD9E77614EBEA78 /* Frameworks */ = {
@@ -307,9 +332,12 @@
 			files = (
 				8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */,
 				4299B72A25687CD9007123B1 /* Offer.swift in Sources */,
+				8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */,
+				8AE6036D2568A3B500983FAB /* Utils.swift in Sources */,
 				4299B72225687C29007123B1 /* Order.swift in Sources */,
 				42048D5225689187005CAA2B /* UIViewController+Alerts.swift in Sources */,
 				4215D3F6256879B500B7E51E /* ViewController.swift in Sources */,
+				8AE6036925689E7000983FAB /* CategoryCollectionViewCell.swift in Sources */,
 				4215D3F2256879B500B7E51E /* AppDelegate.swift in Sources */,
 				4215D3F4256879B500B7E51E /* SceneDelegate.swift in Sources */,
 				42D2BBA52568889B0090D14D /* OfferViewController.swift in Sources */,
