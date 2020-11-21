@@ -18,17 +18,16 @@ final class OfferDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        offerTitleLabel.text = offer.title
+        offerDescriptionLabel.text = offer.description
+        addressLabel.text = merchant.address
         loadImage()
     }
 
     private func loadImage() {
         if let url = URL(string: offer.photoUrl) {
-            let processor = DownsamplingImageProcessor(size: offerImageView.bounds.size)
-                         |> RoundCornerImageProcessor(cornerRadius: 20)
             offerImageView.kf.indicatorType = .activity
             offerImageView.kf.setImage(with: url, options: [
-                .processor(processor),
-                .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
             ])
         }
