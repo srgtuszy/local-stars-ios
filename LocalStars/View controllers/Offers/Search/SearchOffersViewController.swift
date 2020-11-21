@@ -16,6 +16,7 @@ final class SearchOffersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 200
         dataSource.attach(tableView: tableView)
     }
 
