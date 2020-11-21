@@ -23,6 +23,7 @@
 		4299B73125687F03007123B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4299B73025687F03007123B1 /* GoogleService-Info.plist */; };
 		42C3D13C2568B47400C5BE7E /* OffersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D13B2568B47400C5BE7E /* OffersFetcher.swift */; };
 		42C3D13F2568C28700C5BE7E /* OffersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D13E2568C28700C5BE7E /* OffersDataSource.swift */; };
+		42C3D1432568C3F200C5BE7E /* SearchOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */; };
 		42D2BBA52568889B0090D14D /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2BBA42568889B0090D14D /* AddOfferViewController.swift */; };
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
 		8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */; };
@@ -52,6 +53,7 @@
 		4299B73025687F03007123B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42C3D13B2568B47400C5BE7E /* OffersFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersFetcher.swift; sourceTree = "<group>"; };
 		42C3D13E2568C28700C5BE7E /* OffersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersDataSource.swift; sourceTree = "<group>"; };
+		42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOffersViewController.swift; sourceTree = "<group>"; };
 		42D2BBA42568889B0090D14D /* AddOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
 		8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMerchantForm.swift; sourceTree = "<group>"; };
 		8AE6035A2568912600983FAB /* OffersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		42C3D1412568C3E500C5BE7E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				42C3D1422568C3F200C5BE7E /* SearchOffersViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		42D2BBA32568888F0090D14D /* Offer view controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 		8AE6035F25689AE000983FAB /* Offers */ = {
 			isa = PBXGroup;
 			children = (
+				42C3D1412568C3E500C5BE7E /* Search */,
 				8AE6036025689AF000983FAB /* Categories */,
 				8AE60359256890FB00983FAB /* Offers List */,
 				42C3D13B2568B47400C5BE7E /* OffersFetcher.swift */,
@@ -361,6 +372,7 @@
 				8AE6036925689E7000983FAB /* CategoryCollectionViewCell.swift in Sources */,
 				4215D3F2256879B500B7E51E /* AppDelegate.swift in Sources */,
 				4215D3F4256879B500B7E51E /* SceneDelegate.swift in Sources */,
+				42C3D1432568C3F200C5BE7E /* SearchOffersViewController.swift in Sources */,
 				42D2BBA52568889B0090D14D /* AddOfferViewController.swift in Sources */,
 				42C3D13C2568B47400C5BE7E /* OffersFetcher.swift in Sources */,
 				42048D5825689A42005CAA2B /* ImageUploadService.swift in Sources */,
