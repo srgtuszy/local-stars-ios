@@ -15,7 +15,7 @@ struct Merchant: Codable {
     let phone: String
     let email: String
     let category: String
-    let rating: Int
+    let rating: Double
     let openingHours: String
     let website: String
 }
