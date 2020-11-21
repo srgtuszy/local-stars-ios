@@ -44,7 +44,13 @@ final class OfferDetailsViewController: UIViewController {
         guard let offerId = offer.id, let merchantId = merchant.id else {
             return
         }
-        let order = Order(offerId: offerId, merchantId: merchantId, userId: "123", status: .received)
+        let order = Order(id: nil,
+                          title: offer.title,
+                          from: merchant.name,
+                          offerId: offerId,
+                          merchantId: merchantId,
+                          userId: "123",
+                          status: .received)
         do {
             try db.collection("orders").document().setData(from: order)
         } catch {

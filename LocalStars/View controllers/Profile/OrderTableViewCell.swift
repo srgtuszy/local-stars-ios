@@ -9,5 +9,6 @@ import UIKit
 
 final class OrderTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var fromLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
 }

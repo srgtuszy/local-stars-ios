@@ -9,6 +9,8 @@ import Foundation
 
 struct Order: Codable {
     var id: String?
+    let title: String
+    let from: String
     let offerId: String
     let merchantId: String
     let userId: String

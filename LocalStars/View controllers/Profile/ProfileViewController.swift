@@ -16,6 +16,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Moje zamówienia"
+        tableView.rowHeight = 100
         tableView.dataSource = self
         tableView.delegate = self
         fetchOrders()
@@ -43,9 +44,8 @@ extension ProfileViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell") as! OrderTableViewCell
         let order = orders[indexPath.row]
         cell.statusLabel.text = order.status.title
-        if let orderId = order.id {
-            cell.titleLabel.text = "Zamówienie #\(orderId.prefix(8))"
-        }
+        cell.fromLabel.text = order.from
+        cell.titleLabel.text = order.title
 
         return cell
     }
@@ -53,7 +53,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -61,13 +61,13 @@ private extension Order.Status {
     var title: String {
         switch self {
         case .received:
-            return "☑️ Otrzymane"
+            return "Otrzymane ☑️"
         case .inProgress:
-            return "🏗 W trakcie realizacji"
+            return "W trakcie realizacji 🏗"
         case .inDelivery:
-            return "🚚 W drodze do Ciebie"
+            return "W drodze do Ciebie 🚚"
         case .delivered:
-            return "✅ Zrealizowane"
+            return "Zrealizowane ✅"
         }
     }
 }
