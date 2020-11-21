@@ -8,6 +8,7 @@
 import Foundation
 
 struct Merchant: Codable {
+    var id: String?
     let name: String
     let address: String
     let latitude: Double

@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 final class EntityFetcher {
-    typealias CompletionBlock = (Result<[Offer], FetchError>) -> Void
+    typealias OffersCompletionBlock = (Result<[Offer], FetchError>) -> Void
 
     private let db: Firestore
 
@@ -19,7 +19,7 @@ final class EntityFetcher {
         self.db = db
     }
 
-    func startUpdatingOffers(completion: @escaping CompletionBlock) {
+    func startUpdatingOffers(completion: @escaping OffersCompletionBlock) {
         db.collection(.offersCollectionKey)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
@@ -34,7 +34,24 @@ final class EntityFetcher {
             }
     }
 
-    func search(offersMatching query: String, completion: @escaping CompletionBlock) {
+    func fetch(offersFromMearchantWith merchantId: String, completion: @escaping OffersCompletionBlock) {
+        db.collection(.offersCollectionKey)
+            .whereField("merchantId", isEqualTo: merchantId)
+            .addSnapshotListener { querySnapshot, error in
+                if let error = error {
+                    completion(.failure(.firebaseError(error)))
+                    return
+                } else if let snapshot = querySnapshot {
+                    let offers = snapshot.documents.compactMap { try? $0.data(as: Offer.self) }
+                    DispatchQueue.main.async {
+                        completion(.success(offers))
+                    }
+                }
+
+            }
+    }
+
+    func search(offersMatching query: String, completion: @escaping OffersCompletionBlock) {
         db.collection(.offersCollectionKey)
             .whereField("title", isGreaterThanOrEqualTo: query)
             .getDocuments { querySnapshot, error in
@@ -58,13 +75,17 @@ final class EntityFetcher {
                     completion(.failure(.firebaseError(error)))
                     return
                 } else if let snapshot = querySnapshot {
-                    let offers = snapshot.documents.compactMap { try? $0.data(as: Merchant.self) }
+                    let merchants = snapshot.documents.compactMap { (document: QueryDocumentSnapshot) -> Merchant? in
+                        var merchant = try? document.data(as: Merchant.self)
+                        merchant?.id = document.documentID
+
+                        return merchant
+                    }
                     DispatchQueue.main.async {
-                        completion(.success(offers))
+                        completion(.success(merchants))
                     }
                 }
             }
-
     }
 
     enum FetchError: Error {

@@ -19,6 +19,7 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Kategorie"
+        tableView.delegate = self
         dataSource.attach(to: tableView)
     }
 
@@ -31,6 +32,18 @@ class CategoriesViewController: UIViewController {
                 print("failed to fetch merchants: \(error)")
             }
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let merchantOffersViewController = segue.destination as! MerchantOffersViewController
+        merchantOffersViewController.merchant = sender as! Merchant
+    }
+}
+
+extension CategoriesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showOffers", sender: dataSource.merchants[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

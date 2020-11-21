@@ -23,6 +23,7 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
 
     func attach(tableView: UITableView) {
         tableView.dataSource = self
+        tableView.rowHeight = 200
         self.tableView = tableView
     }
 

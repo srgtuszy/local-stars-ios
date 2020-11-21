@@ -13,7 +13,7 @@ import UIKit
 final class MerchantsDataSource: NSObject, UITableViewDataSource {
     private let locationFetcher = LocationFetcher.default
     private weak var tableView: UITableView?
-    private var merchants = [Merchant]()
+    private(set) var merchants = [Merchant]()
 
     func attach(to tableView: UITableView) {
         tableView.dataSource = self
