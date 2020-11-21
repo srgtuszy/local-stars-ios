@@ -10,6 +10,8 @@ import SafariServices
 import Kingfisher
 
 final class MerchantOffersViewController: UIViewController {
+    private typealias MerchantOffer = (Merchant, Offer)
+
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var avatarImageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
@@ -25,6 +27,7 @@ final class MerchantOffersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = merchant.name
+        tableView.delegate = self
         dataSource.attach(tableView: tableView)
         nameLabel.text = merchant.name
         ratingLabel.text = merchant.ratingTitle
@@ -33,6 +36,13 @@ final class MerchantOffersViewController: UIViewController {
         phoneLabel.text = merchant.phone
         configureAvatar()
         fetchOffers()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! OfferDetailsViewController
+        let (merchant, offer) = sender as! MerchantOffer
+        viewController.offer = offer
+        viewController.merchant = merchant
     }
 
     @IBAction @objc private func didTapAddress() {
@@ -82,6 +92,13 @@ final class MerchantOffersViewController: UIViewController {
                 print("failed to fetch offers: \(error)")
             }
         }
+    }
+}
+
+extension MerchantOffersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let offer = dataSource.offers[indexPath.row]
+        performSegue(withIdentifier: "showOffer", sender: (merchant, offer))
     }
 }
 

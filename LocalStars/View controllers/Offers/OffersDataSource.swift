@@ -11,7 +11,7 @@ import Kingfisher
 
 final class OffersDataSource: NSObject, UITableViewDataSource {
     private weak var tableView: UITableView?
-    private var offers = [Offer]()
+    private(set) var offers = [Offer]()
     private let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "pl_PL")

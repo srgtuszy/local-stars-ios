@@ -8,6 +8,9 @@
 import UIKit
 
 final class OfferDetailsViewController: UIViewController {
+    var merchant: Merchant!
+    var offer: Offer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
