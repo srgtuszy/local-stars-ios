@@ -31,8 +31,9 @@ final class OffersDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferListCell", for: indexPath) as! OfferListCell
         let offer = offers[indexPath.row]
-        cell.titleLabel.numberOfLines = 2
-        cell.titleLabel.text = "\(offer.title)\nCena: \(offer.price)"
+        cell.titleLabel.text = "\(offer.title)"
+        cell.priceLabel.text = "\(offer.price)"
+        cell.categoryLabel.text = "💰"
         if let url = URL(string: offer.photoUrl) {
             let processor = DownsamplingImageProcessor(size: cell.offerImageView.bounds.size)
                          |> RoundCornerImageProcessor(cornerRadius: 20)

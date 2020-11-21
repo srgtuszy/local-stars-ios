@@ -10,4 +10,6 @@ import UIKit
 final class OfferListCell: UITableViewCell {
     @IBOutlet var offerImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
 }

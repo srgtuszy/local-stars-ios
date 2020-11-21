@@ -153,40 +153,68 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lU-ut-tHE">
-                                                    <rect key="frame" x="5" y="5" width="404" height="103"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="93"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-5d-hsf">
-                                                    <rect key="frame" x="5" y="56.5" width="404" height="51.5"/>
-                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5qX-5U-j8e" userLabel="x">
+                                                    <rect key="frame" x="10" y="80" width="394" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGQ-s0-sod">
+                                                            <rect key="frame" x="8" y="8" width="33" height="7"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-nt-A3Q">
+                                                            <rect key="frame" x="347" y="8" width="39" height="7"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                </stackView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 💰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7s-zK-0vn" userLabel="Category Label">
+                                                    <rect key="frame" x="337" y="0.0" width="45" height="45"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="WX4-XB-UaE"/>
+                                                        <constraint firstAttribute="height" constant="45" id="axV-lh-Sch"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="20"/>
+                                                            <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="9lU-ut-tHE" secondAttribute="trailing" constant="5" id="3wr-ML-j0F"/>
-                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="top" secondItem="Ed3-wn-D2m" secondAttribute="top" constant="5" id="SzT-jA-RLS"/>
-                                                <constraint firstAttribute="bottom" secondItem="eD9-5d-hsf" secondAttribute="bottom" constant="5" id="TXW-Is-lBk"/>
-                                                <constraint firstAttribute="trailing" secondItem="eD9-5d-hsf" secondAttribute="trailing" constant="5" id="UdQ-Mi-O5l"/>
-                                                <constraint firstAttribute="bottom" secondItem="9lU-ut-tHE" secondAttribute="bottom" constant="5" id="YQy-YO-umL"/>
-                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" constant="5" id="aaD-jV-N4V"/>
-                                                <constraint firstItem="eD9-5d-hsf" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" constant="5" id="eZ3-KO-RYS"/>
-                                                <constraint firstItem="eD9-5d-hsf" firstAttribute="height" secondItem="9lU-ut-tHE" secondAttribute="height" multiplier="0.5" id="xkv-41-NLG"/>
+                                                <constraint firstItem="5qX-5U-j8e" firstAttribute="height" secondItem="9lU-ut-tHE" secondAttribute="height" multiplier="0.25" id="2yo-ie-I3B"/>
+                                                <constraint firstAttribute="trailing" secondItem="9lU-ut-tHE" secondAttribute="trailing" constant="10" id="3wr-ML-j0F"/>
+                                                <constraint firstAttribute="trailing" secondItem="P7s-zK-0vn" secondAttribute="trailing" constant="32" id="F6E-bI-MKf"/>
+                                                <constraint firstAttribute="bottom" secondItem="5qX-5U-j8e" secondAttribute="bottom" constant="10" id="JIa-gE-uS7"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qX-5U-j8e" secondAttribute="trailing" constant="10" id="PUV-ne-NRD"/>
+                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="top" secondItem="Ed3-wn-D2m" secondAttribute="top" constant="10" id="SzT-jA-RLS"/>
+                                                <constraint firstAttribute="bottom" secondItem="9lU-ut-tHE" secondAttribute="bottom" constant="10" id="YQy-YO-umL"/>
+                                                <constraint firstItem="9lU-ut-tHE" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" constant="10" id="aaD-jV-N4V"/>
+                                                <constraint firstItem="5qX-5U-j8e" firstAttribute="leading" secondItem="Ed3-wn-D2m" secondAttribute="leading" constant="10" id="d5o-ko-OO4"/>
+                                                <constraint firstItem="P7s-zK-0vn" firstAttribute="top" secondItem="Ed3-wn-D2m" secondAttribute="top" id="sRW-Ku-UVM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="categoryLabel" destination="P7s-zK-0vn" id="fyS-Yd-Tg6"/>
                                             <outlet property="offerImageView" destination="9lU-ut-tHE" id="2Ps-yH-VS3"/>
-                                            <outlet property="titleLabel" destination="eD9-5d-hsf" id="M7I-VU-vif"/>
+                                            <outlet property="priceLabel" destination="ozd-nt-A3Q" id="8ej-wn-Js7"/>
+                                            <outlet property="titleLabel" destination="uGQ-s0-sod" id="qwj-l3-dCQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
