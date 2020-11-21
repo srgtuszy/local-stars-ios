@@ -27,6 +27,7 @@
 		8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036125689B0100983FAB /* CategoriesViewController.swift */; };
 		8AE6036925689E7000983FAB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */; };
 		8AE6036D2568A3B500983FAB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036C2568A3B500983FAB /* Utils.swift */; };
+		8AE603892568B3F000983FAB /* MerchantLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE603882568B3F000983FAB /* MerchantLoginForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		8AE6036125689B0100983FAB /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8AE6036C2568A3B500983FAB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8AE603882568B3F000983FAB /* MerchantLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantLoginForm.swift; sourceTree = "<group>"; };
 		A3969082FF406B65F932E377 /* Pods-LocalStars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStars.debug.xcconfig"; path = "Target Support Files/Pods-LocalStars/Pods-LocalStars.debug.xcconfig"; sourceTree = "<group>"; };
 		F910CEC53A46073986F2402D /* Pods_LocalStars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalStars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				8A31DE6C256887C9004E67A4 /* Onboarding */,
+				8AE603882568B3F000983FAB /* MerchantLoginForm.swift */,
 			);
 			path = "Merchant ";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */,
+				8AE603892568B3F000983FAB /* MerchantLoginForm.swift in Sources */,
 				4299B72A25687CD9007123B1 /* Offer.swift in Sources */,
 				8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */,
 				8AE6036D2568A3B500983FAB /* Utils.swift in Sources */,

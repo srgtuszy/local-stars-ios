@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func jestemPrzedsiebiorcaTapped() {
-        let form = NewMerchantForm()
+        let form = MerchantLoginForm()
         self.navigationController?.pushViewController(form, animated: true)
     }
 }
