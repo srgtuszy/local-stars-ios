@@ -26,6 +26,15 @@ class NewMerchantForm: FormViewController {
         super.viewDidLoad()
         self.title = "Rejestracja"
         
+        form +++ Section("Dane do logowania")
+            <<< EmailRow() { row in
+                row.title = "Adres e-mail"
+                row.placeholder = "sklep@o2.pl"
+            }
+            <<< PasswordRow() { row in
+                row.title = "Hasło"
+            }
+        
         form +++ Section("Informacje o przedsiębiorcy")
             <<< TextRow() { row in
                 row.title = "Nazwa firmy"
@@ -38,10 +47,6 @@ class NewMerchantForm: FormViewController {
             <<< PhoneRow() { row in
                 row.title = "Numer telefonu"
                 row.placeholder = "792-288-646"
-            }
-            <<< EmailRow() { row in
-                row.title = "Adres e-mail"
-                row.placeholder = "sklep@o2.pl"
             }
             <<< URLRow() { row in
                 row.title = "Strona www"
