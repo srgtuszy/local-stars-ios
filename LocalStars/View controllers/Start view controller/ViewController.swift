@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     
     @IBAction func jestemPrzedsiebiorcaTapped() {
         let form = MerchantLoginForm()
+        form.onboardingType = .merchantOnboarding
+        self.navigationController?.pushViewController(form, animated: true)
+    }
+    
+    @IBAction func logowanieButtonTapped() {
+        let form = MerchantLoginForm()
+        form.onboardingType = .userOnboarding
         self.navigationController?.pushViewController(form, animated: true)
     }
 }
