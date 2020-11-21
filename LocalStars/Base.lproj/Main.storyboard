@@ -339,6 +339,7 @@
                     <navigationItem key="navigationItem" id="LaS-wR-mCV"/>
                     <connections>
                         <outlet property="addressLabel" destination="u76-dg-p6u" id="91c-Jf-mmx"/>
+                        <outlet property="buyButton" destination="8RC-iY-8px" id="U4z-eO-biZ"/>
                         <outlet property="offerDescriptionLabel" destination="XQQ-Ni-ufm" id="aM3-dG-wjy"/>
                         <outlet property="offerImageView" destination="hdg-8t-qyb" id="x3D-Bh-PQe"/>
                         <outlet property="offerTitleLabel" destination="g2l-e8-GCb" id="5he-T8-THP"/>

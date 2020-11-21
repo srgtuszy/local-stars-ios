@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -15,7 +16,9 @@ final class OfferDetailsViewController: UIViewController {
     @IBOutlet private var offerTitleLabel: UILabel!
     @IBOutlet private var offerDescriptionLabel: UILabel!
     @IBOutlet private var addressLabel: UILabel!
+    @IBOutlet private var buyButton: UIButton!
     private let db = Firestore.firestore()
+    private let auth = Auth.auth()
     var merchant: Merchant!
     var offer: Offer!
 
@@ -24,6 +27,7 @@ final class OfferDetailsViewController: UIViewController {
         offerTitleLabel.text = offer.title
         offerDescriptionLabel.text = offer.description
         addressLabel.text = merchant.address
+        buyButton.isHidden = auth.currentUser == nil
         loadImage()
     }
 
