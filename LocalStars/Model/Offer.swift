@@ -13,4 +13,5 @@ struct Offer: Codable {
     let category: String
     let price: String
     let photoUrl: String
+    let merchantId: String
 }

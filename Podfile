@@ -8,4 +8,5 @@ target 'LocalStars' do
   pod 'ImageRow', '~> 4.0'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Storage'
 end
