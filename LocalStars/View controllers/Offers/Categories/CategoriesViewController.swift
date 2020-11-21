@@ -36,7 +36,7 @@ class CategoriesViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let merchantOffersViewController = segue.destination as! MerchantOffersViewController
-        merchantOffersViewController.merchant = sender as! Merchant
+        merchantOffersViewController.merchant = (sender as! Merchant)
     }
 }
 
