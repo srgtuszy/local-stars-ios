@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-final class OffersFetcher {
+final class EntityFetcher {
     typealias CompletionBlock = (Result<[Offer], FetchError>) -> Void
 
     private let db: Firestore
@@ -34,7 +34,7 @@ final class OffersFetcher {
             }
     }
 
-    func search(query: String, completion: @escaping CompletionBlock) {
+    func search(offersMatching query: String, completion: @escaping CompletionBlock) {
         db.collection(.offersCollectionKey)
             .whereField("title", isGreaterThanOrEqualTo: query)
             .getDocuments { querySnapshot, error in
@@ -50,6 +50,23 @@ final class OffersFetcher {
             }
     }
 
+    func search(merchantsWith category: String, completion: @escaping (Result<[Merchant], FetchError>) -> Void) {
+        db.collection(.merchantCollectionKey)
+            .whereField("category", isEqualTo: category)
+            .getDocuments { querySnapshot, error in
+                if let error = error {
+                    completion(.failure(.firebaseError(error)))
+                    return
+                } else if let snapshot = querySnapshot {
+                    let offers = snapshot.documents.compactMap { try? $0.data(as: Merchant.self) }
+                    DispatchQueue.main.async {
+                        completion(.success(offers))
+                    }
+                }
+            }
+
+    }
+
     enum FetchError: Error {
         case firebaseError(Error)
         case missingSnapshot
@@ -58,4 +75,5 @@ final class OffersFetcher {
 
 private extension String {
     static let offersCollectionKey = "offers"
+    static let merchantCollectionKey = "merchants"
 }

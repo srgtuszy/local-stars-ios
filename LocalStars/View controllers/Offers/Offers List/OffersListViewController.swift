@@ -11,7 +11,7 @@ import Kingfisher
 
 class OffersListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
-    private let offerFetcher = OffersFetcher()
+    private let offerFetcher = EntityFetcher()
     private let dataSource = OffersDataSource()
 
     override func viewDidLoad() {

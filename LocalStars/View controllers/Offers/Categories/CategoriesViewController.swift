@@ -11,18 +11,32 @@ import UIKit
 class CategoriesViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
+    private let dataSource = MerchantsDataSource()
+    private let merchantFetcher = EntityFetcher()
     
     var model: [[String: String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource.attach(to: tableView)
+    }
 
+    private func display(merchantsWithCategory category: String) {
+        merchantFetcher.search(merchantsWith: category) {[weak self] result in
+            switch result {
+            case .success(let merchants):
+                self?.dataSource.update(with: merchants)
+            case .failure(let error):
+                print("failed to fetch merchants: \(error)")
+            }
+        }
     }
 }
 
 extension CategoriesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("HI")
+        let category = categories[indexPath.item]["name"]!
+        display(merchantsWithCategory: category)
     }
 }
 

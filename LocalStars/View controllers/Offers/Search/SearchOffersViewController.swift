@@ -12,7 +12,7 @@ final class SearchOffersViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var searchBar: UISearchBar!
     private let dataSource = OffersDataSource()
-    private let fetcher = OffersFetcher()
+    private let fetcher = EntityFetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ final class SearchOffersViewController: UIViewController {
     }
 
     private func search(query: String) {
-        fetcher.search(query: query) {[weak self] result in
+        fetcher.search(offersMatching: query) {[weak self] result in
             switch result {
             case .success(let offers):
                 self?.dataSource.update(with: offers)
