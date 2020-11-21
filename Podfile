@@ -7,4 +7,5 @@ target 'LocalStars' do
   pod 'Eureka'
   pod 'ImageRow', '~> 4.0'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 end
