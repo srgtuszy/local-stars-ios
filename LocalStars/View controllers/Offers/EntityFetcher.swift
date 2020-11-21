@@ -26,7 +26,12 @@ final class EntityFetcher {
                     completion(.failure(.firebaseError(error)))
                     return
                 } else if let snapshot = querySnapshot {
-                    let offers = snapshot.documents.compactMap { try? $0.data(as: Offer.self) }
+                    let offers = snapshot.documents.compactMap { document -> Offer? in
+                        var offer = try? document.data(as: Offer.self)
+                        offer?.id = document.documentID
+
+                        return offer
+                    }
                     DispatchQueue.main.async {
                         completion(.success(offers))
                     }
@@ -42,7 +47,12 @@ final class EntityFetcher {
                     completion(.failure(.firebaseError(error)))
                     return
                 } else if let snapshot = querySnapshot {
-                    let offers = snapshot.documents.compactMap { try? $0.data(as: Offer.self) }
+                    let offers = snapshot.documents.compactMap { document -> Offer? in
+                        var offer = try? document.data(as: Offer.self)
+                        offer?.id = document.documentID
+
+                        return offer
+                    }
                     DispatchQueue.main.async {
                         completion(.success(offers))
                     }
@@ -59,7 +69,12 @@ final class EntityFetcher {
                     completion(.failure(.firebaseError(error)))
                     return
                 } else if let snapshot = querySnapshot {
-                    let offers = snapshot.documents.compactMap { try? $0.data(as: Offer.self) }
+                    let offers = snapshot.documents.compactMap { document -> Offer? in
+                        var offer = try? document.data(as: Offer.self)
+                        offer?.id = document.documentID
+
+                        return offer
+                    }
                     DispatchQueue.main.async {
                         completion(.success(offers))
                     }
@@ -98,3 +113,4 @@ private extension String {
     static let offersCollectionKey = "offers"
     static let merchantCollectionKey = "merchants"
 }
+

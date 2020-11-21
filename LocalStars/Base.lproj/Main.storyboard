@@ -304,6 +304,9 @@
                                 <state key="normal" title="Kup teraz">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapBuyButton" destination="mXo-lZ-LHo" eventType="touchUpInside" id="CMj-d6-iSw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2l-e8-GCb">
                                 <rect key="frame" x="20" y="362" width="374" height="20.5"/>

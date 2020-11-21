@@ -8,10 +8,10 @@
 import Foundation
 
 struct Order: Codable {
-    let title: String
+    let offerId: String
+    let merchantId: String
+    let userId: String
     let status: Status
-    let merchant: Merchant
-    let user: User
 
     enum Status: Int, Codable {
         case received
