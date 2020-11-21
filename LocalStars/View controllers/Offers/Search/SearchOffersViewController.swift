@@ -18,6 +18,7 @@ final class SearchOffersViewController: UIViewController {
         super.viewDidLoad()
         title = "Szukaj"
         tableView.rowHeight = 200
+        tableView.delegate = self
         dataSource.attach(tableView: tableView)
     }
 
@@ -28,6 +29,27 @@ final class SearchOffersViewController: UIViewController {
                 self?.dataSource.update(with: offers)
             case .failure(let error):
                 print("search failed: \(error)")
+            }
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! OfferDetailsViewController
+        let (merchant, offer) = sender as! (Merchant, Offer)
+        viewController.merchant = merchant
+        viewController.offer = offer
+    }
+}
+
+extension SearchOffersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let offer = dataSource.offers[indexPath.row]
+        fetcher.fetch(merchantWith: offer.merchantId) {[weak self] result in
+            switch result {
+            case .success(let merchant):
+                self?.performSegue(withIdentifier: "showOffer", sender: (merchant, offer))
+            case .failure(let error):
+                print("Failed to fetch merchant: \(error)")
             }
         }
     }

@@ -103,6 +103,25 @@ final class EntityFetcher {
             }
     }
 
+    func fetch(merchantWith merchantId: String, completion: @escaping (Result<Merchant, FetchError>) -> Void) {
+        db.collection(.merchantCollectionKey)
+            .document(merchantId)
+            .getDocument { document, error in
+                if let error = error {
+                    completion(.failure(.firebaseError(error)))
+                } else if let document = document {
+                    do {
+                        if var merchant = try document.data(as: Merchant.self) {
+                            merchant.id = document.documentID
+                            completion(.success(merchant))
+                        }
+                    } catch {
+                        completion(.failure(.firebaseError(error)))
+                    }
+                }
+            }
+    }
+
     enum FetchError: Error {
         case firebaseError(Error)
         case missingSnapshot
