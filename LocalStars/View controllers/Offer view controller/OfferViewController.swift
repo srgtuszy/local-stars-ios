@@ -9,10 +9,12 @@ import UIKit
 import Eureka
 import Firebase
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 final class OfferViewController: FormViewController {
     private let db = Firestore.firestore()
     private let uploader = ImageUploadService()
+    private var photoUrl: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +68,42 @@ final class OfferViewController: FormViewController {
     }
 
     private func sendToFirebase() {
-        db.collection("offers").document().setData(form.values())
+        guard let photoUrl = self.photoUrl else {
+            showAlert(title: "Błąd", message: "Potrzebujemy zdjęcia oferty")
+            return
+        }
+        let offer: Offer
+        do {
+            let title = try form.getValue(for: .title)
+            let description = try form.getValue(for: .description)
+            let category = try form.getValue(for: .category)
+            let price = try form.getValue(for: .price)
+            offer = Offer(title: title, description: description, category: category, price: price, photoUrl: photoUrl, merchantId: "1234")
+        } catch {
+            showAlert(title: "Błąd", message: "Wypełnij wszystkie pola!")
+            return
+        }
+        save(offer: offer)
+    }
+
+    private func save(offer: Offer) {
+        do {
+            try db.collection("offers").document().setData(from: offer)
+        } catch {
+            print("Failed to save offer: \(error)")
+            showAlert(title: "Błąd", message: "Nie udało się dodać oferty, spróbuj jeszcze raz.")
+        }
     }
 
     private func upload(image: UIImage) {
-        uploader.upload(image: image) { result in
+        uploader.upload(image: image) {[weak self] result in
             switch result {
             case .success(let url):
                 print("photo url: \(url)")
+                self?.photoUrl = url
             case .failure(let error):
                 print("upload failed: \(error)")
+                self?.showAlert(title: "Błąd", message: "Nie udało się wgrać zdjęcia")
             }
         }
     }
@@ -86,12 +114,23 @@ extension OfferViewController: UIImagePickerControllerDelegate {
         guard let image = info[.originalImage] as? UIImage else {
             return
         }
+        picker.dismiss(animated: true)
         upload(image: image)
     }
 }
 
 extension OfferViewController: UINavigationControllerDelegate {
 
+}
+
+private extension Form {
+    func getValue(for key: String) throws -> String {
+        guard let value = values()[key] as? String else {
+            throw ParseError.keyNotPresent(key)
+        }
+
+        return value
+    }
 }
 
 private enum ParseError: Error {

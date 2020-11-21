@@ -10,15 +10,16 @@ import UIKit
 import Firebase
 
 final class ImageUploadService {
+    typealias CompletionBlock = (Result<String, UploadError>) -> Void
+
     private let storage: Storage
     private let queue = DispatchQueue.global(qos: .userInitiated)
-    private var uploadTask: StorageUploadTask?
 
     init(storage: Storage = .storage()) {
         self.storage = storage
     }
 
-    func upload(image: UIImage, completion: @escaping (Result<String, UploadError>) -> Void) {
+    func upload(image: UIImage, completion: @escaping CompletionBlock) {
         queue.async {[weak self] in
             guard let `self` = self, let imageData = image.jpegData(compressionQuality: 80) else {
                 completion(.failure(.compressionFailed))
@@ -30,13 +31,13 @@ final class ImageUploadService {
                     completion(.failure(.firebaseError(error)))
                     return
                 } else if metadata == nil {
-                    completion(.failure(.missingMetadata))
+                    notify(completion: completion, with: .missingMetadata)
                     return
                 }
 
                 imageRef.downloadURL { url, urlError in
                     if let error = urlError {
-                        completion(.failure(.firebaseError(error)))
+                        notify(completion: completion, with: .firebaseError(error))
                         return
                     }
 
@@ -45,7 +46,7 @@ final class ImageUploadService {
                             completion(.success(url.absoluteString))
                         }
                     } else {
-                        completion(.failure(.missingUrl))
+                        notify(completion: completion, with: .missingUrl)
                     }
                 }
             }
@@ -58,5 +59,11 @@ final class ImageUploadService {
         case missingUrl
         case missingMetadata
         case firebaseError(Error)
+    }
+}
+
+private func notify(completion: @escaping ImageUploadService.CompletionBlock, with error: ImageUploadService.UploadError) {
+    DispatchQueue.main.async {
+        completion(.failure(error))
     }
 }
