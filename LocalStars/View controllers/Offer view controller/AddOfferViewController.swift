@@ -28,13 +28,13 @@ final class AddOfferViewController: FormViewController {
                 row.tag = .title
                 row.placeholder = "Wpisz tytuł"
             }
-            <<< TextRow() { row in
+            <<< TextAreaRow() { row in
                 row.title = "Opis"
                 row.tag = .description
                 row.placeholder = "Wpisz opis"
             }
             <<< PushRow<String> { row in
-                row.title = "Wybierz kategorię swojego biznesu"
+                row.title = "Wybierz kategorię"
                 row.tag = .category
                 row.options = categories.map({ dict in
                     return "\(dict["emoji"]!) \(dict["name"]!)"
