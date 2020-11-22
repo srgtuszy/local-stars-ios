@@ -33,10 +33,12 @@ final class AddOfferViewController: FormViewController {
                 row.tag = .description
                 row.placeholder = "Wpisz opis"
             }
-            <<< TextRow() { row in
-                row.title = "Kategoria"
+            <<< PushRow<String> { row in
+                row.title = "Wybierz kategorię swojego biznesu"
                 row.tag = .category
-                row.placeholder = "Wpisz kategorię"
+                row.options = categories.map({ dict in
+                    return "\(dict["emoji"]!) \(dict["name"]!)"
+                })
             }
             <<< TextRow() { row in
                 row.title = "Cena"
@@ -51,7 +53,6 @@ final class AddOfferViewController: FormViewController {
                     self.pickPhoto()
                 }
             }
-
             <<< ButtonRow() { row in
                 row.title = "Wyślij"
                 row.onCellSelection {[unowned self] _, _ in
@@ -78,7 +79,12 @@ final class AddOfferViewController: FormViewController {
             let description = try form.getValue(for: .description)
             let category = try form.getValue(for: .category)
             let price = try form.getValue(for: .price)
-            offer = Offer(title: title, description: description, category: category, price: price, photoUrl: photoUrl, merchantId: .merchantId)
+            offer = Offer(title: title,
+                          description: description,
+                          category: String(category.dropFirst(2)),
+                          price: price,
+                          photoUrl: photoUrl,
+                          merchantId: .merchantId)
         } catch {
             showAlert(title: "Błąd", message: "Wypełnij wszystkie pola!")
             return

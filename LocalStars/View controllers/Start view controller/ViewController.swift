@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         przedsiebiorcaButton.setUnderlinedTitle(string: "Jestem przedsiębiorcą")
         logowanieButton.layer.borderColor = UIColor(white: 1.0, alpha: 1.0).cgColor
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        present(AddOfferViewController(), animated: true)
+    }
     
     @IBAction func jestemPrzedsiebiorcaTapped() {
         let form = MerchantLoginForm()
