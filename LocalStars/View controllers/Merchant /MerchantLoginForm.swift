@@ -78,7 +78,13 @@ class MerchantLoginForm: FormViewController {
                 alert.addAction(okAction)
                 self.present(alert, animated: true, completion: nil)
             } else {
-                print("logged in")
+                if self.onboardingType == .merchantOnboarding {
+                    let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let vc = storyBoard.instantiateViewController(identifier: "MerchantAdmin")
+                    self.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    // support user login!!
+                }
             }
         }
     }

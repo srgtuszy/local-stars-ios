@@ -35,6 +35,7 @@
 		42D2BBA52568889B0090D14D /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2BBA42568889B0090D14D /* AddOfferViewController.swift */; };
 		601733C826BE9B88BB12EF90 /* Pods_LocalStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F910CEC53A46073986F2402D /* Pods_LocalStars.framework */; };
 		8A31DE6E256887D8004E67A4 /* NewMerchantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */; };
+		8A7D59392569E306004E94C8 /* MerchantAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D59382569E306004E94C8 /* MerchantAdminViewController.swift */; };
 		8AE6035B2568912600983FAB /* OffersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6035A2568912600983FAB /* OffersListViewController.swift */; };
 		8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036125689B0100983FAB /* CategoriesViewController.swift */; };
 		8AE6036925689E7000983FAB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */; };
@@ -73,6 +74,7 @@
 		42C3D1B12569D1D000C5BE7E /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		42D2BBA42568889B0090D14D /* AddOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
 		8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMerchantForm.swift; sourceTree = "<group>"; };
+		8A7D59382569E306004E94C8 /* MerchantAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantAdminViewController.swift; sourceTree = "<group>"; };
 		8AE6035A2568912600983FAB /* OffersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListViewController.swift; sourceTree = "<group>"; };
 		8AE6036125689B0100983FAB /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		8AE6036825689E7000983FAB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		8A31DE6B256887AD004E67A4 /* Merchant  */ = {
 			isa = PBXGroup;
 			children = (
+				8A7D59372569E2F6004E94C8 /* Merchant Section */,
 				8A31DE6C256887C9004E67A4 /* Onboarding */,
 				8AE603882568B3F000983FAB /* MerchantLoginForm.swift */,
 			);
@@ -238,6 +241,14 @@
 				8A31DE6D256887D8004E67A4 /* NewMerchantForm.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8A7D59372569E2F6004E94C8 /* Merchant Section */ = {
+			isa = PBXGroup;
+			children = (
+				8A7D59382569E306004E94C8 /* MerchantAdminViewController.swift */,
+			);
+			path = "Merchant Section";
 			sourceTree = "<group>";
 		};
 		8AE60359256890FB00983FAB /* Offers List */ = {
@@ -401,6 +412,7 @@
 				42C3D19D25694F2700C5BE7E /* LocationFetcher.swift in Sources */,
 				4299B72A25687CD9007123B1 /* Offer.swift in Sources */,
 				42C3D1A125695EB000C5BE7E /* MerchantOffersViewController.swift in Sources */,
+				8A7D59392569E306004E94C8 /* MerchantAdminViewController.swift in Sources */,
 				8AE6036225689B0100983FAB /* CategoriesViewController.swift in Sources */,
 				42C3D1AE2569CE9300C5BE7E /* ProfileViewController.swift in Sources */,
 				42C3D1972568E24B00C5BE7E /* MerchantsDataSource.swift in Sources */,
