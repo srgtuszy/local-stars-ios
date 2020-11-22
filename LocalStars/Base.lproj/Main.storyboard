@@ -227,9 +227,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-Zc-R1j">
+                                <rect key="frame" x="297" y="44" width="97" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dodaj ofertę"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-V9-7UN">
+                                <rect key="frame" x="297" y="44" width="97" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="MIb-eT-KYd"/>
+                                    <constraint firstAttribute="height" constant="44" id="tJc-rc-89a"/>
+                                </constraints>
+                                <state key="normal" title="Dodaj ofertę"/>
+                                <connections>
+                                    <action selector="didTapAddOfferButton" destination="xA8-W0-7cr" eventType="touchUpInside" id="4Gd-oH-4kd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OFX-xs-W1O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OFX-xs-W1O" firstAttribute="trailing" secondItem="gSy-V9-7UN" secondAttribute="trailing" constant="20" id="gbt-sW-KEd"/>
+                            <constraint firstItem="gSy-V9-7UN" firstAttribute="top" secondItem="OFX-xs-W1O" secondAttribute="top" id="oEW-QI-LUC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="DZQ-gK-3sd" id="m6E-Y5-EYk"/>

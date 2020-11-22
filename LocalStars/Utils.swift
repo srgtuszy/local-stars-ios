@@ -16,3 +16,8 @@ let categories = [["name":"Gastronomia", "image":"gastro", "emoji":"🍔"],
                   ["name":"Inne usługi", "image":"inneuslugi", "emoji":"⭐️"],
                   ["name":"Różne", "image":"rozne", "emoji":"🎰"],
                     ]
+
+
+extension String {
+    static let merchantId = "rBabB8LvKR0VPJcQBA0o"
+}

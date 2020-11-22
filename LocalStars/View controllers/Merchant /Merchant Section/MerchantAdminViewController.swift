@@ -29,8 +29,9 @@ class MerchantAdminViewController: UIViewController {
             }
         }
     }
-}
 
-private extension String {
-    static let merchantId = "rBabB8LvKR0VPJcQBA0o"
+    @IBAction @objc private func didTapAddOfferButton() {
+        let viewController = AddOfferViewController()
+        present(viewController, animated: true)
+    }
 }

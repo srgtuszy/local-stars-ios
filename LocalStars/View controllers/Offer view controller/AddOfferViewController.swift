@@ -78,7 +78,7 @@ final class AddOfferViewController: FormViewController {
             let description = try form.getValue(for: .description)
             let category = try form.getValue(for: .category)
             let price = try form.getValue(for: .price)
-            offer = Offer(title: title, description: description, category: category, price: price, photoUrl: photoUrl, merchantId: "1234")
+            offer = Offer(title: title, description: description, category: category, price: price, photoUrl: photoUrl, merchantId: .merchantId)
         } catch {
             showAlert(title: "Błąd", message: "Wypełnij wszystkie pola!")
             return
