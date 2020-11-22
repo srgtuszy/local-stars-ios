@@ -137,9 +137,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdv-yw-Vhn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdv-yw-Vhn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="341" id="cmS-7a-w8K"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuh-ax-mBE">
                                 <rect key="frame" x="20" y="280" width="333" height="45"/>
@@ -148,9 +150,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DZQ-gK-3sd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DZQ-gK-3sd">
                                 <rect key="frame" x="0.0" y="342" width="414" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferListCell" rowHeight="113" id="qwX-AI-7qh" customClass="OfferListCell" customModule="LocalStars" customModuleProvider="target">
@@ -227,11 +228,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-Zc-R1j">
-                                <rect key="frame" x="297" y="44" width="97" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dodaj ofertę"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-V9-7UN">
                                 <rect key="frame" x="297" y="44" width="97" height="44"/>
                                 <constraints>
@@ -247,8 +243,15 @@
                         <viewLayoutGuide key="safeArea" id="OFX-xs-W1O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gdv-yw-Vhn" firstAttribute="top" secondItem="4mc-j6-VrN" secondAttribute="top" id="4zh-zg-jkb"/>
+                            <constraint firstItem="gdv-yw-Vhn" firstAttribute="trailing" secondItem="OFX-xs-W1O" secondAttribute="trailing" id="94d-mn-PB0"/>
+                            <constraint firstItem="DZQ-gK-3sd" firstAttribute="top" secondItem="gdv-yw-Vhn" secondAttribute="bottom" constant="1" id="9CA-sG-bor"/>
+                            <constraint firstItem="DZQ-gK-3sd" firstAttribute="leading" secondItem="OFX-xs-W1O" secondAttribute="leading" id="CW4-0s-Hi0"/>
+                            <constraint firstAttribute="bottom" secondItem="DZQ-gK-3sd" secondAttribute="bottom" id="NxF-nP-OG7"/>
+                            <constraint firstItem="gdv-yw-Vhn" firstAttribute="leading" secondItem="OFX-xs-W1O" secondAttribute="leading" id="SaW-Mh-0tC"/>
                             <constraint firstItem="OFX-xs-W1O" firstAttribute="trailing" secondItem="gSy-V9-7UN" secondAttribute="trailing" constant="20" id="gbt-sW-KEd"/>
                             <constraint firstItem="gSy-V9-7UN" firstAttribute="top" secondItem="OFX-xs-W1O" secondAttribute="top" id="oEW-QI-LUC"/>
+                            <constraint firstItem="DZQ-gK-3sd" firstAttribute="trailing" secondItem="OFX-xs-W1O" secondAttribute="trailing" id="qQA-dp-DyQ"/>
                         </constraints>
                     </view>
                     <connections>
